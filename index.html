@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KawaNova Mobile Apps | 開発者ツール・資格対策ドリル公式ポータル</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="KawaNova Mobile Apps | 開発者ツール・資格対策ドリル公式ポータル" />
+  <meta name="description" content="KawaNovaによる完全オンデバイス・プライバシー保護の次世代Androidアプリシリーズ。cURL変換、DNS設定、HTTPヘッダー、JWT検証、宅建、基本情報、応用情報など全36作品をラインナップ。" />
+  <meta name="keywords" content="KawaNova, Androidアプリ, cURL変換, DNSレコード, HTTPヘッダー, JWTインスペクター, Cron式, 宅建アプリ, 基本情報技術者, 応用情報技術者, Docker, Kubernetes" />
+  <meta name="author" content="KawaNova" />
+  <link rel="canonical" href="https://kawanova.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kawanova.github.io/" />
+  <meta property="og:title" content="KawaNova Mobile Apps - 公式アプリポータル" />
+  <meta property="og:description" content="完全オンデバイス・プライバシー保護の次世代Androidアプリシリーズ。開発者ツール＆資格試験対策全36作品。" />
+  <meta property="og:image" content="https://kawanova.github.io/privacy-policy/feature_graphic.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              slate: '#0F172A',
+              card: '#1E293B',
+              border: '#334155',
+              cyan: '#06B6D4',
+              sky: '#38BDF8',
+              emerald: '#10B981',
+              amber: '#F59E0B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #0B1120;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .glow-cyan {
+      box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.25);
+    }
+  </style>
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-sky-400 flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-cyan-500/20">
+          ⚡
+        </div>
+        <div>
+          <span class="font-bold text-lg tracking-tight text-white">KawaNova <span class="text-cyan-400">Apps</span></span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">全36作品</span>
+        </div>
+      </div>
+
+      <nav class="flex items-center space-x-4 text-sm font-medium">
+        <a href="#apps" class="text-slate-300 hover:text-cyan-400 transition-colors">アプリ一覧</a>
+        <a href="https://kawanova.github.io/privacy-policy/android-common.html" target="_blank" rel="noopener" class="text-slate-300 hover:text-cyan-400 transition-colors hidden sm:inline-block">プライバシーポリシー</a>
+        <a href="https://github.com/KawaNova" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center space-x-1.5 transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-16 pb-20 border-b border-slate-800/80 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div class="absolute inset-0 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Badges -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/90 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-6 shadow-inner">
+        <span>🚀 36 Android Apps Released</span>
+        <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+        <span>Android 16 Ready</span>
+        <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+        <span>100% On-Device Privacy</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+        開発現場を加速し、資格突破を導く。<br />
+        <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">完全ローカル動作・次世代モバイルツール</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+        cURLコード変換、DNSゾーン設計、HTTPヘッダー診断、JWT検証から、宅建士・情報処理技術者・AWS対策まで。<br class="hidden sm:inline" />
+        個人情報やAPIキーを外部送信しない、安全でストレスフリーなプロダクションネイティブアプリ群です。
+      </p>
+
+      <!-- Search Bar -->
+      <div class="max-w-xl mx-auto relative glow-cyan">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <input 
+          id="searchInput"
+          type="text"
+          placeholder="アプリ名・技術キーワード（cURL, DNS, Docker, 宅建, AWS...）で検索" 
+          class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all shadow-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Navigation & App List -->
+  <main id="apps" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+    
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+      <button onclick="filterCategory('all')" id="tab-all" class="category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20 transition-all">
+        すべて <span class="opacity-80">(36)</span>
+      </button>
+      <button onclick="filterCategory('devtools')" id="tab-devtools" class="category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition-all">
+        🛠️ 開発者・インフラ実務 <span class="opacity-70">(18)</span>
+      </button>
+      <button onclick="filterCategory('exam')" id="tab-exam" class="category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition-all">
+        🎓 国家試験・資格ドリル <span class="opacity-70">(10)</span>
+      </button>
+      <button onclick="filterCategory('lifestyle')" id="tab-lifestyle" class="category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition-all">
+        🎨 ライフスタイル・ツール <span class="opacity-70">(8)</span>
+      </button>
+    </div>
+
+    <!-- Active Count Display -->
+    <div class="flex items-center justify-between text-xs text-slate-400 mb-6 px-1">
+      <span id="resultsCount">表示中: 36 件</span>
+      <span>※ 完全端末内処理 / プライバシー保護準拠</span>
+    </div>
+
+    <!-- Apps Grid -->
+    <div id="appsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Dynamic cards rendered by JS -->
+    </div>
+
+    <!-- No results state -->
+    <div id="noResults" class="hidden text-center py-20">
+      <div class="text-4xl mb-3">🔍</div>
+      <h3 class="text-lg font-bold text-slate-200 mb-1">一致するアプリが見つかりませんでした</h3>
+      <p class="text-sm text-slate-500">キーワードを変えるか、カテゴリフィルターをリセットしてください。</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        
+        <div>
+          <div class="flex items-center space-x-2.5 mb-3">
+            <span class="text-2xl">⚡</span>
+            <span class="font-bold text-white text-base">KawaNova Apps</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            「オフラインで安心して使える高速な実務ツール」をテーマに、Kotlin / Jetpack Compose による高品質なAndroidネイティブアプリを開発しています。
+          </p>
+          <a href="app-ads.txt" class="text-xs text-slate-500 hover:text-slate-400 font-mono">app-ads.txt</a>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">プライバシーポリシー</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://kawanova.github.io/privacy-policy/android-common.html" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">📄 総合・共通プライバシーポリシー</a></li>
+            <li><a href="https://kawanova.github.io/privacy-policy/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">📑 全36アプリ別 ポリシー目録</a></li>
+            <li><span class="text-slate-500">外部送信ゼロ / 完全オンデバイス保証</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">フィードバック・不具合報告</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://forms.gle/b5uKjXdsNx3BfyiZ7" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">🛠️ 開発者ツール ご意見フォーム</a></li>
+            <li><a href="https://forms.gle/kY282TgyFQhc5GCp8" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">🎓 資格対策ドリル 誤植・意見フォーム</a></li>
+            <li><a href="https://forms.gle/gWghJ9VtXTc9METz8" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors">🎨 ライフスタイル・ツール ご意見フォーム</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; 2026 KawaNova. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Built with Clean Architecture, Kotlin 2.0 & Jetpack Compose</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    const apps = [{"id": "036", "slug": "curl-converter", "nameJa": "cURLコードジェネレータ", "nameEn": "CurlForge", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.curlforge", "descJa": "cURLコマンドからPython、JS、Go、Kotlin、PHP、Rust等の実行可能コードを完全ローカルで即座に逆引き生成。", "descEn": "Instant cURL to Python, JS, Go, Kotlin, PHP & Rust code generator with visual reverse request builder.", "tags": ["cURL", "Python", "Fetch API", "Go net/http", "10+ Languages", "100% On-Device"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\036_curl-converter\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "⚡", "formType": "dev", "iconUrl": "assets/icons/icon_036_curl-converter.png"}, {"id": "035", "slug": "dns-inspector", "nameJa": "DNSレコード設定ガイド", "nameEn": "DNSCraft", "category": "devtools", "categoryLabel": "🛠️ インフラ・DNS", "pkg": "com.kawanova.dnscraft", "descJa": "A/AAAA/MX/TXT/CAA/SRV等15種以上のDNSゾーン生成、SPF/DMARCメール認証監査、BIND/Route53/Terraform出力。", "descEn": "Visual DNS zone builder, SPF & DMARC email security compliance audit, and multi-cloud zone export.", "tags": ["DNS", "SPF / DMARC", "BIND Zone", "Route 53", "Terraform", "Security A+"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\035_dns-inspector\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🔍", "formType": "dev", "iconUrl": "assets/icons/icon_035_dns-inspector.png"}, {"id": "034", "slug": "http-headers", "nameJa": "HTTPヘッダー設定ガイド", "nameEn": "HeaderCraft", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.headercraft", "descJa": "直感CORSビルダー、A+セキュリティヘッダー診断(CSP/HSTS)、Cache-Control設計、Nginx/Apache/Next.js設定出力。", "descEn": "CORS, Security & Cache-Control configurator with A+ security audit and multi-platform config export.", "tags": ["HTTP Headers", "CORS", "CSP & HSTS", "Cache-Control", "Nginx / Apache"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\034_http-headers\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🌐", "formType": "dev", "iconUrl": "assets/icons/icon_034_http-headers.png"}, {"id": "033", "slug": "jwt-inspector", "nameJa": "JWTインスペクター", "nameEn": "JWT Inspector", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.jwtinspector", "descJa": "JWT (JSON Web Token) の即時デコード、Header/Payload/Signature検証、クレーム分析、完全オフライン安全解析。", "descEn": "Offline JWT token decoder, claims analyzer & signature validator. 100% on-device zero tracking.", "tags": ["JWT", "Auth", "OAuth 2.0", "Security", "JSON Claims"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\033_jwt-inspector\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🔐", "formType": "dev", "iconUrl": "assets/icons/icon_033_jwt-inspector.png"}, {"id": "032", "slug": "cron-generator", "nameJa": "Cron式ビルダー", "nameEn": "CronGen", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.crongen", "descJa": "直感GUIによるCron式生成、構文逆解析、次回5回の実行日時リアルタイムシミュレーション、実務プリセット搭載。", "descEn": "Visual Cron expression builder, syntax parser and upcoming trigger time simulator.", "tags": ["Cron", "Job Scheduling", "Linux", "Crontab", "Simulator"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\032_cron-generator\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "⏱️", "formType": "dev", "iconUrl": "assets/icons/icon_032_cron-generator.png"}, {"id": "027", "slug": "api-tester", "nameJa": "モバイルAPIテスター", "nameEn": "API Tester", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.apitester", "descJa": "スマホから即時REST APIテスト。GET/POST/PUT/DELETE対応、カスタムヘッダー、JSONレスポンスハイライト整形。", "descEn": "Pocket REST API client & JSON formatter for testing endpoints anywhere without a desktop.", "tags": ["REST API", "HTTP Client", "JSON Formatter", "Debugging"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\027_api-tester\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "⚡", "formType": "dev", "iconUrl": "assets/icons/icon_027_api-tester.png"}, {"id": "025", "slug": "k8s-drill", "nameJa": "Kubernetes超入門", "nameEn": "K8s Drill", "category": "devtools", "categoryLabel": "🛠️ インフラ特訓", "pkg": "com.kawanova.k8sdrill", "descJa": "Pod, Deployment, Service, Ingress, ConfigMap等のマニフェスト記法とクラスタ構成図をシチュエーション特訓。", "descEn": "Master Kubernetes architecture, Pods, Deployments, Services & Ingress with interactive visual drills.", "tags": ["Kubernetes", "Docker", "DevOps", "Cloud Native", "CKA Prep"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\025_k8s-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "☸️", "formType": "dev", "iconUrl": "assets/icons/icon_025_k8s-drill.png"}, {"id": "023", "slug": "regex-drill", "nameJa": "正規表現超入門", "nameEn": "Regex Drill", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.regexdrill", "descJa": "実務頻出パターン（メール、URL、日付、電話番号、郵便番号）の逆引き特訓とリアルタイム正規表現テスター。", "descEn": "Practical regular expressions drill & interactive tester for developers and data cleaners.", "tags": ["Regex", "String Processing", "Pattern Matching", "CheatSheet"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\023_regex-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🧩", "formType": "dev", "iconUrl": "assets/icons/icon_023_regex-drill.png"}, {"id": "022", "slug": "network-drill", "nameJa": "ネットワーク超入門", "nameEn": "Network Drill", "category": "devtools", "categoryLabel": "🛠️ インフラ特訓", "pkg": "com.kawanova.networkdrill", "descJa": "HTTPステータスコード、DNS解決フロー、TCP/UDPポート番号、3ウェイハンドシェイクをパケット図解で特訓。", "descEn": "HTTP status codes, DNS, TCP 3-way handshake & standard networking protocols drill.", "tags": ["Network", "HTTP / HTTPS", "DNS", "TCP / IP", "Packet Flow"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\022_network-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "📡", "formType": "dev", "iconUrl": "assets/icons/icon_022_network-drill.png"}, {"id": "021", "slug": "docker-drill", "nameJa": "Docker & コンテナ超入門", "nameEn": "Docker Drill", "category": "devtools", "categoryLabel": "🛠️ インフラ特訓", "pkg": "com.kawanova.dockerdrill", "descJa": "実務で使えるDockerfileベストプラクティス、docker-compose.yml構成、コンテナ運用コマンドの集中特訓。", "descEn": "Hands-on Dockerfile, Compose & container lifecycle drill for modern software engineers.", "tags": ["Docker", "Containers", "Dockerfile", "Compose", "DevOps"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\021_docker-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🐳", "formType": "dev", "iconUrl": "assets/icons/icon_021_docker-drill.png"}, {"id": "020", "slug": "seo-analyzer", "nameJa": "SEOアナライザー", "nameEn": "SEO Analyzer", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.seoanalyzer", "descJa": "Webサイトの健全性診断。Title/Desc長、OGP画像プレビュー、見出し構造(H1-H3)、Twitterカードを即時検査。", "descEn": "Mobile website SEO health check & social share preview analyzer.", "tags": ["SEO", "OGP Meta", "Web Performance", "Social Cards"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\020_seo-analyzer\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "📊", "formType": "dev", "iconUrl": "assets/icons/icon_020_seo-analyzer.png"}, {"id": "019", "slug": "linux-drill", "nameJa": "Linuxコマンド超入門", "nameEn": "Linux Drill", "category": "devtools", "categoryLabel": "🛠️ インフラ特訓", "pkg": "com.kawanova.linuxdrill", "descJa": "シェル操作、ファイル権限（chmod/chown計算）、プロセス管理、パイプ・リダイレクトの現場即戦力ドリル。", "descEn": "Essential Linux commands, permissions calculator & bash navigation drill.", "tags": ["Linux", "Bash", "Shell", "Permissions", "Admin"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\019_linux-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🐧", "formType": "dev", "iconUrl": "assets/icons/icon_019_linux-drill.png"}, {"id": "018", "slug": "git-drill", "nameJa": "Gitコマンド超入門", "nameEn": "Git Drill", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.gitdrill", "descJa": "ブランチツリー可視化、コンフリクト解消、間違えてコミットした時の脱出コマンド特訓。", "descEn": "Interactive Git branch visualization, merge conflict resolution & undo workflow drill.", "tags": ["Git", "GitHub", "Branching", "Conflict Rescue", "Version Control"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\018_git-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🌿", "formType": "dev", "iconUrl": "assets/icons/icon_018_git-drill.png"}, {"id": "007", "slug": "sql-query-drill", "nameJa": "データ分析SQL基礎ドリル", "nameEn": "SQL Query Drill", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.sql_query_drill", "descJa": "SELECT, JOIN, GROUP BY, 集計関数, サブクエリなど実務データ分析クエリの構文特訓。", "descEn": "Practical SQL query training for data analysts and backend programmers.", "tags": ["SQL", "Database", "SELECT / JOIN", "Data Analytics"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\007_sql-drill\\app\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground.png", "fallbackEmoji": "🗄️", "formType": "dev", "iconUrl": "assets/icons/icon_007_sql-query-drill.png"}, {"id": "010", "slug": "Python3-DataAnalysis", "nameJa": "Python3 データ分析認定ドリル", "nameEn": "Python3 Data Analysis", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawadev.python3basicdata", "descJa": "pandas, NumPy, scikit-learn, Matplotlib によるデータ分析・機械学習の基礎認定試験対策特訓。", "descEn": "Python data analysis exam preparation covering pandas, NumPy & visualization.", "tags": ["Python3", "pandas", "NumPy", "Data Science"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\010_python3-data-analysis\\ic_launcher-playstore.png", "fallbackEmoji": "🐍", "formType": "dev", "iconUrl": "assets/icons/icon_010_Python3-DataAnalysis.png"}, {"id": "011", "slug": "Python3-Basic", "nameJa": "Python3 基礎認定ドリル", "nameEn": "Python3 Basic Drill", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.python3basic", "descJa": "Pythonの基本文法、リスト・辞書内包表記、例外処理、オブジェクト指向の基礎知識対策。", "descEn": "Fundamental Python 3 syntax, data structures & programming concepts drill.", "tags": ["Python3", "Programming", "Syntax", "OOP"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\011_python3-basic\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher.png", "fallbackEmoji": "🐍", "formType": "dev", "iconUrl": "assets/icons/icon_011_Python3-Basic.png"}, {"id": "012", "slug": "Python3-Practical", "nameJa": "Python3 実践エンジニア特訓", "nameEn": "Python3 Practical Drill", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.python3practical", "descJa": "スクレイピング、非同期処理、Webフレームワーク、ユニットテスト等実践的エンジニアリング特訓。", "descEn": "Advanced Python engineering: scraping, async concurrency & production practices.", "tags": ["Python3", "Web Scraping", "Asyncio", "Production"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\012_python3-practical\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v4\\ic_launcher.png", "fallbackEmoji": "🐍", "formType": "dev", "iconUrl": "assets/icons/icon_012_Python3-Practical.png"}, {"id": "031", "slug": "font-preview", "nameJa": "フォントプレビュー & スタイラー", "nameEn": "FontStyler", "category": "devtools", "categoryLabel": "🛠️ 開発者ツール", "pkg": "com.kawanova.fontstyler", "descJa": "スマホで英数フォントとタイポグラフィを比較・プレビュー。CSSフォントコード即時生成。", "descEn": "Typography preview & font pairing tester with CSS export for UI designers & coders.", "tags": ["Typography", "Fonts", "CSS Generator", "UI Design"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\031_font-preview\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🔤", "formType": "dev", "iconUrl": "assets/icons/icon_031_font-preview.png"}, {"id": "028", "slug": "takken-drill", "nameJa": "宅建士 過去問ドリル", "nameEn": "Takken Drill", "category": "exam", "categoryLabel": "🎓 国家資格", "pkg": "com.kawanova.takkendrill", "descJa": "宅建業法、権利関係（民法）、法令上の制限、税・その他を網羅した年度別・分野別過去問特訓。", "descEn": "Real estate transaction agent exam drill covering civil law, zoning & tax regulations.", "tags": ["宅建士", "民法", "宅建業法", "過去問演習", "オフライン対応"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\028_takken-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🏠", "formType": "exam", "iconUrl": "assets/icons/icon_028_takken-drill.png"}, {"id": "026", "slug": "sg-drill", "nameJa": "情報セキュリティマネジメント超入門", "nameEn": "SG Drill", "category": "exam", "categoryLabel": "🎓 国家試験", "pkg": "com.kawanova.sgdrill", "descJa": "暗号化技術、認証プロトコル、ゼロトラスト、攻撃手法と防御策のフロー図解付き過去問演習。", "descEn": "Information Security Management Examination drill with crypto & attack flow diagrams.", "tags": ["情報処理技術者", "セキマネ", "サイバーセキュリティ", "暗号化", "IPA"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\026_sg-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🛡️", "formType": "exam", "iconUrl": "assets/icons/icon_026_sg-drill.png"}, {"id": "024", "slug": "aws-clf-drill", "nameJa": "AWS クラウドプラクティショナー特訓", "nameEn": "AWS CLF Drill", "category": "exam", "categoryLabel": "🎓 クラウド資格", "pkg": "com.kawanova.awsclf", "descJa": "CLF-C02 最新シラバス対応。EC2, S3, RDS, IAM, VPC, 責任共有モデル等の頻出概念を完全攻略。", "descEn": "AWS Certified Cloud Practitioner (CLF-C02) comprehensive study drills & cheat sheets.", "tags": ["AWS", "Cloud Practitioner", "CLF-C02", "IAM & VPC", "Cloud Architecture"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\024_aws-clf-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "☁️", "formType": "exam", "iconUrl": "assets/icons/icon_024_aws-clf-drill.png"}, {"id": "017", "slug": "fe-kamoku-a", "nameJa": "基本情報技術者 科目A 免除特訓", "nameEn": "FE Drill (Kamoku A)", "category": "exam", "categoryLabel": "🎓 国家試験", "pkg": "com.kawanova.fekamokua", "descJa": "基本情報技術者試験 科目Aの頻出分野（テクノロジ・マネジメント・ストラテジ）を集中攻略。", "descEn": "Fundamental Information Technology Engineer Examination (Section A) practice drills.", "tags": ["基本情報", "科目A", "テクノロジ", "ストラテジ", "IPA"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\017_fe-kamoku-a\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "💻", "formType": "exam", "iconUrl": "assets/icons/icon_017_fe-kamoku-a.png"}, {"id": "016", "slug": "ap-drill", "nameJa": "応用情報 午後プログラミング特訓", "nameEn": "AP Drill (Programming)", "category": "exam", "categoryLabel": "🎓 国家試験", "pkg": "com.kawanova.apdrill", "descJa": "応用情報技術者試験 午後プログラミング（アルゴリズム・木構造・動的計画法）のトレース演習。", "descEn": "Applied Information Technology Engineer Examination afternoon programming & algorithm drill.", "tags": ["応用情報", "午後プログラミング", "アルゴリズム", "木構造", "IPA"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\016_ap-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "📈", "formType": "exam", "iconUrl": "assets/icons/icon_016_ap-drill.png"}, {"id": "015", "slug": "fe-drill", "nameJa": "基本情報 科目B アルゴリズム特訓", "nameEn": "FE Drill (Algorithm)", "category": "exam", "categoryLabel": "🎓 国家試験", "pkg": "com.kawanova.fedrill", "descJa": "新試験制度 科目Bの擬似言語トレース、ソート探索アルゴリズム、再帰呼び出しを図解シミュレート。", "descEn": "FE Section B pseudo-code execution & algorithm tracing simulator.", "tags": ["基本情報", "科目B", "擬似言語", "アルゴリズム", "IPA"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\015_fe-drill\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "⚡", "formType": "exam", "iconUrl": "assets/icons/icon_015_fe-drill.png"}, {"id": "002", "slug": "it-passport", "nameJa": "ITパスポート 過去問特訓", "nameEn": "IT Passport Drill", "category": "exam", "categoryLabel": "🎓 国家試験", "pkg": "com.kawanova.itpassport", "descJa": "ITパスポート試験のシラバス対応過去問演習。ストラテジ・マネジメント・テクノロジの要点集。", "descEn": "IT Passport Examination prep: essential IT literacy and business strategy drill.", "tags": ["ITパスポート", "国家試験", "IT基礎", "IPA"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\002_it-passport\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground_img.png", "fallbackEmoji": "🎓", "formType": "exam", "iconUrl": "assets/icons/icon_002_it-passport.png"}, {"id": "001", "slug": "boki-journal-drill", "nameJa": "簿記3級 仕訳ミニドリル", "nameEn": "Boki Journal Drill", "category": "exam", "categoryLabel": "🎓 会計資格", "pkg": "com.kawanova.bokijournal", "descJa": "日商簿記3級の最重要テーマである「仕訳（借方・貸方）」を隙間時間で反復特訓。", "descEn": "Bookkeeping Level 3 journal entry training drill for accounting students.", "tags": ["簿記3級", "仕訳", "日商簿記", "会計"], "iconSource": null, "fallbackEmoji": "📊", "formType": "exam", "iconUrl": null}, {"id": "009", "slug": "fp3-quiz", "nameJa": "FP3級 トレーナー", "nameEn": "FP3 Trainer", "category": "exam", "categoryLabel": "🎓 金融資格", "pkg": "com.kawanova.fp3trainer", "descJa": "ライフプランニング、リスク管理、金融資産運用、タックスプランニング、不動産、相続の6分野を網羅。", "descEn": "Financial Planner Level 3 exam practice covering tax, investment & estate planning.", "tags": ["FP3級", "ファイナンシャルプランナー", "資産運用", "税金"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\009_fp3-quiz\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground_img.png", "fallbackEmoji": "💰", "formType": "exam", "iconUrl": "assets/icons/icon_009_fp3-quiz.png"}, {"id": "030", "slug": "markdown-editor", "nameJa": "MarkNote - Markdownエディタ", "nameEn": "MarkNote", "category": "lifestyle", "categoryLabel": "🎨 クリエイター", "pkg": "com.kawanova.marknote", "descJa": "完全オフライン・軽量高速Markdownエディタ。リアルタイムプレビュー、構文ハイライト、ローカル保存。", "descEn": "Distraction-free Markdown editor with live preview & local-first storage.", "tags": ["Markdown", "Editor", "Notes", "Local-First"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\030_markdown-editor\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "📝", "formType": "lifestyle", "iconUrl": "assets/icons/icon_030_markdown-editor.png"}, {"id": "029", "slug": "color-palette", "nameJa": "配色パレット抽出・WCAG解析", "nameEn": "ColorCraft", "category": "lifestyle", "categoryLabel": "🎨 デザインツール", "pkg": "com.kawanova.colorpalette", "descJa": "画像から主要カラーをパレット抽出。HEX/RGB/HSL変換、WCAG 2.1アクセシビリティコントラスト比判定。", "descEn": "Extract palettes from photos & test WCAG 2.1 accessibility contrast compliance.", "tags": ["Color Palette", "WCAG Contrast", "HEX / RGB", "Design"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\029_color-palette\\store_assets\\play\\app_icon_512.png", "fallbackEmoji": "🎨", "formType": "lifestyle", "iconUrl": "assets/icons/icon_029_color-palette.png"}, {"id": "003", "slug": "rakuphotoai", "nameJa": "らくフォトAI - 背景切り抜き", "nameEn": "RakuPhoto AI", "category": "lifestyle", "categoryLabel": "🎨 クリエイター", "pkg": "com.kawanova.rakuphotoai", "descJa": "ワンタップで人物・被写体の背景を自動透過切り抜き。商品写真やSNSアイコン作成に便利。", "descEn": "Instant AI background remover for product photos and portraits.", "tags": ["AI Cutout", "Background Removal", "Photo Editing"], "iconSource": null, "fallbackEmoji": "✂️", "formType": "lifestyle", "iconUrl": null}, {"id": "014", "slug": "tatenaga-screenshot", "nameJa": "たてながスクショ", "nameEn": "Long Screenshot Stitcher", "category": "lifestyle", "categoryLabel": "🎨 ユーティリティ", "pkg": "com.kawanova.tatenaga", "descJa": "複数のスクリーンショットを自動で縦方向に結合。チャット履歴やWebページの保存に最適。", "descEn": "Stitch multiple screenshots seamlessly into one tall vertical image.", "tags": ["Screenshot", "Stitch", "Utility"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\014-screenshot\\androidApp\\qa-screenshots\\icon_ai_v1.png", "fallbackEmoji": "📸", "formType": "lifestyle", "iconUrl": "assets/icons/icon_014_tatenaga-screenshot.png"}, {"id": "005", "slug": "lazyfitnessai", "nameJa": "ズボラFit AI - スクワットカウンター", "nameEn": "LazyFitness AI", "category": "lifestyle", "categoryLabel": "🎨 ヘルスケア", "pkg": "com.kawanova.lazyfitnessai", "descJa": "端末の加速度センサーでスクワット回数を自動カウント。ズボラでも続く毎日の習慣化サポート。", "descEn": "Automated squat repetition counter using device accelerometer.", "tags": ["Fitness", "Squat Counter", "Habit Tracker"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\005_mascle-counter\\LazyFitnessAI\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\drawable\\ic_launcher_foreground.png", "fallbackEmoji": "🏋️", "formType": "lifestyle", "iconUrl": "assets/icons/icon_005_lazyfitnessai.png"}, {"id": "004", "slug": "wanpo-alert", "nameJa": "わんぽアラート", "nameEn": "Wanpo Alert", "category": "lifestyle", "categoryLabel": "🎨 ペット＆ライフ", "pkg": "com.kawanova.wanpo_alert", "descJa": "愛犬の散歩時間をリマインド。熱中症予防のアスファルト地表面温度予測機能付き。", "descEn": "Dog walking reminder & heat index alert for pet owners.", "tags": ["Dog Care", "Walk Reminder", "Weather"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\004_dog-care\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher_foreground.png", "fallbackEmoji": "🐕", "formType": "lifestyle", "iconUrl": "assets/icons/icon_004_wanpo-alert.png"}, {"id": "006", "slug": "aurapitch", "nameJa": "AuraPitch / おとトレ", "nameEn": "AuraPitch", "category": "lifestyle", "categoryLabel": "🎨 音楽・聴力", "pkg": "com.kawanova.aurapitch", "descJa": "絶対音感・相対音感の音当てトレーニング。ピッチ判定による正確な発声・音感向上。", "descEn": "Ear training & absolute pitch recognition workout.", "tags": ["Ear Training", "Pitch", "Music"], "iconSource": null, "fallbackEmoji": "🎵", "formType": "lifestyle", "iconUrl": null}, {"id": "008", "slug": "novusarcade", "nameJa": "NovusArcade: つぶやきミニゲーム集", "nameEn": "NovusArcade", "category": "lifestyle", "categoryLabel": "🎨 ゲーム", "pkg": "com.kawanova.novusarcade", "descJa": "サクッと遊べるレトロテイストのカジュアルアーケードミニゲーム集。", "descEn": "Casual retro arcade mini-games collection for short breaks.", "tags": ["Arcade", "Retro Games", "Casual"], "iconSource": "c:\\Users\\Kawamoto\\Documents\\AgentAIDev\\mobile-apps\\008_novus-arcade\\KawaNovaArcade\\app\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\mipmap-hdpi-v26\\ic_launcher_foreground.png", "fallbackEmoji": "🕹️", "formType": "lifestyle", "iconUrl": "assets/icons/icon_008_novusarcade.png"}];
+    let currentCategory = 'all';
+    let currentQuery = '';
+
+    const grid = document.getElementById('appsGrid');
+    const noResults = document.getElementById('noResults');
+    const countDisplay = document.getElementById('resultsCount');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderApps() {
+      const filtered = apps.filter(app => {
+        const matchesCategory = (currentCategory === 'all' || app.category === currentCategory);
+        const query = currentQuery.toLowerCase();
+        const matchesQuery = !query || 
+          app.nameJa.toLowerCase().includes(query) ||
+          app.nameEn.toLowerCase().includes(query) ||
+          app.descJa.toLowerCase().includes(query) ||
+          app.descEn.toLowerCase().includes(query) ||
+          app.tags.some(t => t.toLowerCase().includes(query));
+        return matchesCategory && matchesQuery;
+      });
+
+      countDisplay.textContent = `表示中: ${filtered.length} 件 (全${apps.length}作品)`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      grid.innerHTML = filtered.map(app => {
+        const iconHtml = app.iconUrl 
+          ? `<img src="${app.iconUrl}" alt="${app.nameJa}" class="w-14 h-14 rounded-2xl object-cover shadow-md shadow-slate-950/40 border border-slate-700/60" loading="lazy" />`
+          : `<div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-700 border border-slate-600 flex items-center justify-center text-2xl shadow-md">${app.fallbackEmoji}</div>`;
+
+        const playLink = `https://play.google.com/store/apps/details?id=${app.pkg}`;
+        const privacyLink = `https://kawanova.github.io/privacy-policy/android-${app.slug}.html`;
+        const feedbackLink = getFeedbackLink(app);
+
+        const tagsHtml = app.tags.slice(0, 4).map(t => 
+          `<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-800/80 text-slate-300 border border-slate-700/60 font-mono-code">${t}</span>`
+        ).join('');
+
+        return `
+          <div class="bg-slate-900/90 rounded-2xl border border-slate-800 hover:border-slate-700 p-5 flex flex-col justify-between transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/5 group">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center space-x-3.5">
+                  ${iconHtml}
+                  <div>
+                    <span class="text-[11px] font-semibold text-cyan-400 uppercase tracking-wider block">${app.categoryLabel}</span>
+                    <h3 class="font-bold text-white text-base leading-snug group-hover:text-cyan-300 transition-colors">${app.nameJa}</h3>
+                    <p class="text-xs text-slate-400 font-medium">${app.nameEn}</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-slate-500">#${app.id}</span>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-2">
+                ${app.descJa}
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                ${tagsHtml}
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="${playLink}" target="_blank" rel="noopener" class="font-bold text-cyan-400 hover:text-cyan-300 flex items-center space-x-1">
+                <span>Google Play</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+
+              <div class="flex items-center space-x-2 text-[11px]">
+                <a href="${privacyLink}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-200 transition-colors" title="プライバシーポリシー">
+                  ポリシー
+                </a>
+                <span class="text-slate-600">・</span>
+                <a href="${feedbackLink}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-200 transition-colors" title="フィードバック・要望">
+                  要望
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function getFeedbackLink(app) {
+      const enc = encodeURIComponent;
+      if (app.formType === 'dev') {
+        return `https://docs.google.com/forms/d/e/1FAIpQLSeAKUuGOlBBI4bR7DwF0Ji6xPk20A19-asM1VWQG1pcAG4BLg/viewform?usp=pp_url&entry.447629162=${enc(app.nameEn + ' (' + app.nameJa + ')')}`;
+      } else if (app.formType === 'exam') {
+        return `https://docs.google.com/forms/d/e/1FAIpQLSeiqpItf9qamM89uDsmM15ERo4xl5RDqrVD6IHE2ZqXDs2rxA/viewform?usp=pp_url&entry.661639264=${enc(app.nameJa)}`;
+      } else {
+        return `https://docs.google.com/forms/d/e/1FAIpQLSe0rmuJ5IW3UGm72ax_q1gBPgxmYM5kNV9zDAqzNLyqyFqKog/viewform?usp=pp_url&entry.355175170=${enc(app.nameEn + ' (' + app.nameJa + ')')}`;
+      }
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.category-tab').forEach(t => {
+        t.className = 'category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-600 transition-all';
+      });
+      const activeTab = document.getElementById(`tab-${cat}`);
+      if (activeTab) {
+        activeTab.className = 'category-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20 transition-all';
+      }
+      renderApps();
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      currentQuery = e.target.value.trim();
+      renderApps();
+    });
+
+    // Initial render
+    renderApps();
+  </script>
+</body>
+</html>
