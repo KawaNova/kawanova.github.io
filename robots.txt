@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kawanova.github.io/sitemap.xml
