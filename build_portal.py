@@ -600,6 +600,7 @@ def generate_html():
   <meta name="keywords" content="KawaNova, Androidアプリ, cURL変換, DNSレコード, HTTPヘッダー, JWTインスペクター, Cron式, 宅建アプリ, 基本情報技術者, 応用情報技術者, Docker, Kubernetes" />
   <meta name="author" content="KawaNova" />
   <link rel="canonical" href="https://kawanova.github.io/" />
+  <meta name="google-site-verification" content="7Cmy6fM2i0lHoOxS4KuKYxa0OxgVa8MvxO7ceKS2ULY" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
